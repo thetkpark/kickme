@@ -1,25 +1,51 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from './logo.svg'
+// import './App.css'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { Component } from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import About from './pages/About'
+import Calendar from './pages/Calendar'
+import Dashboard from './pages/Dashboard'
+import Employees from './pages/Employees'
+import Profiles from './pages/Profiles'
+
+import Notify from './components/js/jsfnc'
+import {
+  openCity,
+  Vnotify,
+  expandEm,
+  Abgen,
+  selectChar,
+  popEm,
+  Htextgen
+} from './components/js/jsfnc'
+class App extends Component {
+  render () {
+    return (
+      <BrowserRouter>
+        <Switch>
+          <Route path='/profiles'>
+            <Profiles />
+          </Route>
+          <Route path='/employees'>
+            <Employees />
+          </Route>
+          <Route path='/calendar'>
+            <Calendar />
+          </Route>
+          <Route path='/about'>
+            <About />
+          </Route>
+          <Route exact path='/'>
+            <Dashboard />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    )
+  }
+  constructor () {
+    super();
+  }
 }
 
-export default App;
+export default App

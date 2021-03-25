@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Fira Sans', sans-serif;
+
+}
+body{
+
+    background-color: #c2c2c2;
+}
+.container{
+
+    display: grid;
+    height: 120vh;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr;
+    grid-template-rows: 0.09fr 1.5fr 0.25fr;
+    grid-template-areas: "nav nav nav nav"
+    "main main main main"
+    "footer footer footer footer";
+    /* grid-gap: 0.2rem; */
+    /* text-transform: uppercase; */
+    font-size: 2rem;
+    color: rgb(24, 24, 24);
+    text-align: center;
+
+}
+
+nav{
+    /* box-shadow: inset 0 0 5em rgba(0, 0, 0, 0.692); */
+    background-color: #354732;
+    grid-area: nav;
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+    color: rgb(238, 238, 238);
+    display: flex;
+    align-items: center;
+    /* display: flex; */
+    /* justify-content: space-between; */
+}
+
+nav .navl{
+    text-align: left;
+    width: 50%;
+    height: 100%;
+    float: left;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+nav .navl img{
+    margin-top: 1%;
+    margin-left: 1%;
+    width: 9%;
+    cursor: pointer;
+}
+
+nav .navr{
+    font-size: 0.5em;
+    width: 50%;
+    float:right;
+    
+}
+
+nav .navr ul{
+    /* margin-top: 1%; */
+    height: 100%;
+    display: flex;
+    justify-content:flex-end;
+    align-items: center;
+    list-style-type: none;
+    overflow: hidden;
+    /* background-color: #333333; */
+}
+nav ul li{
+    
+    float: left;
+}
+nav ul li a{
+    
+    color: rgb(238, 238, 238);
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+nav ul li a:hover{
+    text-decoration: underline;
+}
+main{
+    background-color: #ECE7E0;
+    grid-area: main;
+    /* border-radius: 5px; */
+    /* padding: 5px; */
+    grid-template-columns: 0.6fr 1fr;
+    grid-gap: 0.2rem;
+    grid-template-areas: "welcome daily";
+    background-blend-mode:soft-light;
+    background-image: url(../asset/gorillazbandasnegrasjonroru.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset  0em 1em 3em rgb(27, 37, 29);
+    
+}
+.covered{
+    box-shadow: inset  0em 1em 3em rgba(27, 37, 29, 0.603);
+    background-image: url(../asset/okinimesumama.gif);
+    width: 100%;
+    height: 40%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ebebeb;
+    text-shadow: 0px 5px 0px #111;
+    text-transform: uppercase;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.cbox{
+    width: 100%;
+
+    padding: 2% 0;
+    border-top: #ebebeb 1px solid;
+    border-bottom: #ebebeb 1px solid;
+}
+.popup{
+    width: 35%;
+    height: 35%;
+    padding: 3% 3%;
+    background-color:#354732;
+    border-radius: 4%;
+    box-sizing: border-box;
+    z-index: 2;
+    text-align: center;
+    opacity: 0;
+    top: -200%;
+    transform: translate(-50%,-50%) scale(0.5);
+    transition: opacity 300ms ease-in-out,
+                top 100ms ease-in-out,
+                transform 1000ms ease-in-out;
+}
+/* @keyframes opacity{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+} */
+.popup.active{
+    opacity: 1;
+    top: 50%;
+    transform: translate(-50%,-50%) scale(1);
+    transition: transform 300ms cubic-bezier(0.18,0.89,0.43,1.19);
+}
+.popup .icon{
+    margin: 5px 0px;
+    width: 50px;
+    height: 50px;
+    border: 2px solid #f5fff3;
+    text-align: center;
+    display: inline-block;
+    border-radius: 50%;
+    line-height: 45px;
+}
+.popup .icon i{
+    font-size: 1em;
+    color: #f5fff3;
+}
+.popup .title{
+    color: #f5fff3;
+    margin: 5px 0px;
+    font-size: 0.8em;
+    font-weight: 600;
+}
+.popup .describe{
+    color: #f5fff3;
+    font-size: 0.5em;
+    padding: 5px;
+}
+.popup .dismiss-btn{
+    margin-top: 10px;
+}
+.popup .dismiss-btn button{
+    padding: 10px 20px;
+    background-color: #111;
+    color: #f2f2f2;
+    border: 2px solid #111;
+    font-size: 0.6em;
+    outline: none;
+    border-radius: 10px;
+    transition: all 300ms ease-in-out;
+    cursor: pointer;
+}
+.popup .dismiss-btn button:hover{
+    color: #111;
+    background: #f5f5f5;
+}
+.popup > div{
+    position: relative;
+    top: 10px;
+    opacity: 0;
+}
+.popup.active > div{
+    top: 0px;
+    opacity: 1;
+}
+.popup.active .icon{
+    transition: all 300ms ease-in-out 250ms;
+}
+.popup.active .title{
+    transition: all 300ms ease-in-out 300ms;
+}
+.popup.active .describe{
+    transition: all 300ms ease-in-out 350ms;
+}
+.popup.active .dismiss-btn{
+    transition: all 300ms ease-in-out 400ms;
+}
+.popup.center.active::after{
+    opacity: 0;
+}
+
+
+
+footer{
+
+    color: #dce6dc;
+    background-color:#354732;
+    grid-area: footer;
+    /* border-radius: 5px; */
+    padding: 5px;
+    font-size: 0.6em;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+/* footer p{
+
+} */
+footer span#ft{
+    display: flex;
+    /* box-shadow: inset  0em 1em 3em rgba(27, 37, 29, 0.603); */
+    background-image: url(../asset/ico.png);
+    width: 10%;
+    height: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size:60%;
+    
+}
+footer span#good {
+    font-size: 0.9em;
+    margin-left: -3%;
+    text-align: left;
+}
+.dialogue{
+    width: 100%;
+    height: 100%;
+}
+.bottomd{
+    width: 100%;
+    height: 80%;
+}
+.mypic{
+    width: 100%;
+    height: 100%;
+    background-image: url(../asset/as.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    /* display: flex; */
+
+}
+.topd{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    margin-top: 3%;
+}
+.mytext{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    width: 60%;
+    font-size: 2vw;
+    word-spacing: 0.2em;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 1em;
+    border-bottom: 0.5vw solid #354732;
+    border-right: 0.5vw solid #353535;
+    position: absolute;
+    line-height: 1.2em;
+}
+
+.mytext span {
+    opacity: 0;
+ }
+ .mytext span.revealed {
+    opacity: 1;
+ }
+ .mytext span.green {
+    color: #294936;
+ }
+ .mytext span.red {
+    color: #bd0094;
+ }
