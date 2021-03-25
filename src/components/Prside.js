@@ -2,7 +2,7 @@ import React from 'react'
 import './css/profile.css'
 import Footer from './Footer'
 import Nav from './Nav'
-function Prside () {
+function Prside ({setSelection}) {
   return (
     <>
       <div id='sidebar'>
@@ -16,10 +16,10 @@ function Prside () {
               onchange='hideIcon(this);'
             />
           </div>
-          <div className='boxchar' onclick='selectChar()' id='char1'>
+          <div className='boxchar' onclick='selectChar()' id='char1' onClick={() => setSelection(0)}>
             <p>Uzumaki Naruto</p>
           </div>
-          <div className='boxchar' onclick='selectChar()' id='char2'>
+          <div className='boxchar' onclick='selectChar()' id='char2' onClick={() => setSelection(1)}>
             <p>Shintaro Kisaragi</p>{' '}
           </div>
           <div className='boxchar' onclick='selectChar()' id='char3'>

@@ -1,7 +1,7 @@
 import React from 'react'
 import './css/profile.css'
-import daiImg from '../components/asset/boxchar1.png'
-function Prmain() {
+// import daiImg from '../components/asset/boxchar1.png'
+function Prmain({name, id, age, position, status, image}) {
     return (
         <>
             <div id="mainP">
@@ -29,15 +29,15 @@ function Prmain() {
             <div className="welcome">
                 
                 <div className="display">
-                    <h5><span>NAME:</span><span id="fname"> uzumaki naruto</span></h5>
-                    <h5><span>ID:</span><span id="id"> 00001</span></h5>
+                    <h5><span>NAME:</span><span id="fname"> {name}</span></h5>
+                    <h5><span>ID:</span><span id="id"> {id}</span></h5>
                     
                 </div>
                 <div className="info">
                     <h1 id="name">NARUTO</h1>
-                    <h5><span>AGE:</span><span id="age"> 17</span></h5>
-                    <h5><span>POSITION:</span><span id="pos"> Ninja</span></h5>
-                    <h5><span>STATUS:</span><span id="status"> Newbie</span></h5>
+                    <h5><span>AGE:</span><span id="age"> {age}</span></h5>
+                    <h5><span>POSITION:</span><span id="pos"> {position}</span></h5>
+                    <h5><span>STATUS:</span><span id="status"> {status}</span></h5>
                     <br/>
                     <h4>[TASK]</h4>
                     <h5><span>WORKING:</span> 0 <a href="#" id="showwork">show</a></h5>
@@ -55,7 +55,7 @@ function Prmain() {
             </div>
             
             <div className="daily" id="daily">
-                <img id="daiImg" src={daiImg}/>
+                <img id="daiImg" src={image}/>
             </div>
       
             </div>
