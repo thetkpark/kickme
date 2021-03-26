@@ -1,41 +1,32 @@
-import React from 'react'
+import React, { Component } from 'react'
 import './css/aboutus.css'
-// import jsfnc from '../components/js/jsfnc'
-function Abmain () {
+import { Abgen } from './js/jsfnc'
+import { testconsole } from './js/jsfnc'
+import Notipopup from './Notipopup'
 
+class Abmain extends React.Component {
+  componentDidMount = () => {
+    testconsole()
+    Abgen()
+  }
+  render () {
+    return (
+      <>
+        <div id='mainAbout'>
+          <Notipopup/>
+          <div className='dialogue'>
+            <div className='topd'>
+              <div className='mytext'></div>
+            </div>
 
-  return (
-    <>
-      <div id='mainAbout'>
-        <div className='popup center'>
-          <div className='icon'>
-            <i className='fas fa-envelope-open'></i>
-          </div>
-
-          <div className='title'>Notification</div>
-          <div className='describe'>
-            <div className='cbox'>hello ayo</div>
-          </div>
-          <div className='dismiss-btn'>
-            <button id='dismiss-btn'>
-              <i className='fas fa-times-circle'></i>
-            </button>
+            <div className='bottomd'>
+              <div className='mypic'></div>
+            </div>
           </div>
         </div>
-        <div className='dialogue'>
-          <div className='topd'>
-            <div className='mytext'></div>
-            
-          </div>
-
-          <div className='bottomd'>
-            <div className='mypic'></div>
-          </div>
-        </div>
-      </div>
-      
-    </>
-  )
+      </>
+    )
+  }
 }
 
 export default Abmain

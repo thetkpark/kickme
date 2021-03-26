@@ -1,26 +1,32 @@
 import React from 'react'
-
 import '../components/css/emprostyle.css'
+import { expandEm,Vnotify } from './js/jsfnc'
 
-function Emside () {
-  return (
-    <>
-      <div id='sidebar'>
-        <div classNamecd='onStatus'>
-          <span>status</span>
-          <div classNamecd='circle'></div>
-        </div>
+class Emside extends React.Component {
+  componentDidMount = () => {
+    expandEm()
+    Vnotify()
+  }
+  render () {
+    return (
+      <>
+        <div id='sidebar'>
+          <div className='onStatus'>
+            <span>status</span>
+            <div className='circle'></div>
+          </div>
 
-        <div classNamecd='panel'>
-          <button classNamecd='collapsible'>View options</button>
-          <div classNamecd='content'>
-            <p id='empy'>Employees</p>
-            <p id='pstn'>Position</p>
+          <div className='panel'>
+            <button className='collapsible'>View options</button>
+            <div className='content'>
+              <p id='empy'>Employees</p>
+              <p id='pstn'>Position</p>
+            </div>
           </div>
         </div>
-      </div>
-    </>
-  )
+      </>
+    )
+  }
 }
 
 export default Emside

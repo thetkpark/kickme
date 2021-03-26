@@ -1,6 +1,6 @@
 ////////////////////////////////////////////////Employees
 //notify
-const Notify = () => {
+export const Notify = () => {
   document.getElementById('notify').addEventListener('click', function () {
     document.getElementsByClassName('popup')[0].classList.add('active')
   })
@@ -8,23 +8,26 @@ const Notify = () => {
   document.getElementById('dismiss-btn').addEventListener('click', function () {
     document.getElementsByClassName('popup')[0].classList.remove('active')
   })
-}
-export default Notify
 
-//tab
-export function openCity (evt, cityName) {
-  var i, tabcontent, tablinks
-  tabcontent = document.getElementsByClassName('tabcontent')
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = 'none'
-  }
-  tablinks = document.getElementsByClassName('tablinks')
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(' active', '')
-  }
-  document.getElementById(cityName).style.display = 'block'
-  evt.currentTarget.className += ' active'
-  document.getElementById('InfoTab').click()
+  
+}
+
+//show
+export const popEm = () => {
+  document.getElementById('showwork').addEventListener('click', function () {
+    document.getElementsByClassName('popup')[0].classList.add('active')
+  })
+  document
+    .getElementById('showcompleted')
+    .addEventListener('click', function () {
+      document.getElementsByClassName('popup')[0].classList.add('active')
+    })
+  document.getElementById('showreport').addEventListener('click', function () {
+    document.getElementsByClassName('popup')[0].classList.add('active')
+  })
+  document.getElementById('dismiss-btn').addEventListener('click', function () {
+    document.getElementsByClassName('popup')[0].classList.remove('active')
+  })
 }
 
 //view option notify
@@ -35,6 +38,25 @@ export function Vnotify () {
   document.getElementById('pstn').addEventListener('click', function () {
     document.getElementsByClassName('popup')[0].classList.add('active')
   })
+  document.getElementById('dismiss-btn').addEventListener('click', function () {
+    document.getElementsByClassName('popup')[0].classList.remove('active')
+  })
+}
+
+//tab
+export const Eachtab = (evt, TabName) => {
+  var i, tabcontent, tablinks
+  tabcontent = document.getElementsByClassName('tabcontent')
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = 'none'
+  }
+  tablinks = document.getElementsByClassName('tablinks')
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(' active', '')
+  }
+  document.getElementById(TabName).style.display = 'block'
+  evt.currentTarget.className += ' active'
+  document.getElementById('InfoTab').click()
 }
 
 ////////////////////////////////////////////////calendar
@@ -56,6 +78,11 @@ export const expandEm = () => {
 }
 
 ////////////////////////////////////////////////aboutus
+export const testconsole = () => {
+  setTimeout(() => {
+    console.log('Hi')
+  }, 2000)
+}
 
 export const Abgen = () => {
   var container = document.querySelector('.mytext')
@@ -119,7 +146,7 @@ export const Abgen = () => {
 }
 ////////////////////////////////////////////////profiles
 export function selectChar () {
-  document.getElementById('char1').onclick = function () {
+  document.getElementById('char1').onClick = function () {
     document.getElementById('daiImg').src = 'asset/boxchar1.png'
     //text
     document.getElementById('fname').innerHTML = ' uzumaki naruto'
@@ -130,7 +157,7 @@ export function selectChar () {
     document.getElementById('pos').innerHTML = ' Ninja'
     document.getElementById('status').innerHTML = ' Newbie'
   } //text
-  document.getElementById('char2').onclick = function () {
+  document.getElementById('char2').onClick = function () {
     document.getElementById('daiImg').src = 'asset/boxchar2.png'
     document.getElementById('fname').innerHTML = ' SHINTARO KISARAGI'
     document.getElementById('id').innerHTML = ' 00002'
@@ -140,7 +167,7 @@ export function selectChar () {
     document.getElementById('pos').innerHTML = ' Neet'
     document.getElementById('status').innerHTML = ' Newbie'
   }
-  document.getElementById('char3').onclick = function () {
+  document.getElementById('char3').onClick = function () {
     document.getElementById('daiImg').src = 'asset/boxchar3.jpg'
     //text
     document.getElementById('fname').innerHTML = ' AYANO TATEYAMA'
@@ -151,7 +178,7 @@ export function selectChar () {
     document.getElementById('pos').innerHTML = ' Student'
     document.getElementById('status').innerHTML = ' Newbie'
   }
-  document.getElementById('char4').onclick = function () {
+  document.getElementById('char4').onClick = function () {
     document.getElementById('daiImg').src = 'asset/boxchar4.jpg'
     //text
     document.getElementById('fname').innerHTML = ' SHINOBU OSHINO'
@@ -162,7 +189,7 @@ export function selectChar () {
     document.getElementById('pos').innerHTML = ' Vampire'
     document.getElementById('status').innerHTML = ' Newbie'
   }
-  document.getElementById('char5').onclick = function () {
+  document.getElementById('char5').onClick = function () {
     document.getElementById('daiImg').src = 'asset/boxchar5.jpg'
     //text
     document.getElementById('fname').innerHTML = ' Ryūko Matoi'
@@ -175,20 +202,7 @@ export function selectChar () {
   }
 }
 
-//show
-export const popEm = () => {
-  document.getElementById('showwork').addEventListener('click', function () {
-    document.getElementsByClassName('popup')[0].classList.add('active')
-  })
-  document
-    .getElementById('showcompleted')
-    .addEventListener('click', function () {
-      document.getElementsByClassName('popup')[0].classList.add('active')
-    })
-  document.getElementById('showreport').addEventListener('click', function () {
-    document.getElementsByClassName('popup')[0].classList.add('active')
-  })
-}
+
 
 ////////////////////////////////////////////////index(magics)
 export const Htextgen = () => {

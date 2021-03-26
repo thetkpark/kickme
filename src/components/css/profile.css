@@ -219,15 +219,19 @@ nav ul li a:hover {
 .info .contactlistP a {
   margin-right: 2%;
 }
-hr {
+
+/* hr {
   margin-top: 5%;
-}
+} */
 .display {
   font-style: italic;
   padding-top: 4vh;
   padding-left: 4vw;
   grid-area: display;
   /* background-color: #84a77e; */
+}
+div.display {
+  height: 5%;
 }
 .info {
   padding-top: 1vh;
@@ -240,6 +244,11 @@ hr {
   color: #f136a9;
   font-size: 0.5em;
   font-style: italic;
+  transition: all 300ms ease-in-out;
+}
+.info a:hover {
+  text-shadow: #111 1px 1px 1px;
+  color: #e9b3db;
 }
 .daily {
   grid-area: daily;
@@ -307,6 +316,9 @@ input#search:focus {
   color: #dce6dc;
   /* line-height: 0.9; */
   text-align: center;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   top: 50%;
   /* background-color: #3547328e; */
 }
@@ -346,8 +358,32 @@ input#search:focus {
   background-blend-mode: normal;
   text-shadow: rgb(24, 24, 24) 1px 1px 4px;
 }
+.boxchar:active{
+  box-shadow:currentColor inset 1px 1px 1px;
+  font-family: FontAwesome;
+  content: "\f056";
+}
 .boxchar p:hover {
   color: antiquewhite;
+}
+#addchar p::before {
+  font-family: FontAwesome;
+  content: "\f055";
+}
+#addchar p {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  /* font-size: 2em; */
+  color: rgb(20, 20, 20);
+  top: 25%;
+}
+#addchar {
+  background-color: #b6b6b6;
+}
+#addchar:hover {
+  background-color: #e2e2e2;
+  text-shadow: none;
 }
 footer {
   color: #dce6dc;

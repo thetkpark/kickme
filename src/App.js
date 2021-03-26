@@ -10,15 +10,6 @@ import Employees from './pages/Employees'
 import Profiles from './pages/Profiles'
 
 import Notify from './components/js/jsfnc'
-import {
-  openCity,
-  Vnotify,
-  expandEm,
-  Abgen,
-  selectChar,
-  popEm,
-  Htextgen
-} from './components/js/jsfnc'
 class App extends Component {
   render () {
     return (
@@ -42,9 +33,6 @@ class App extends Component {
         </Switch>
       </BrowserRouter>
     )
-  }
-  constructor () {
-    super();
   }
 }
 
