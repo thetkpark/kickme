@@ -17,19 +17,19 @@ function Homeside () {
         <div className='menusidebar'>
           <Link to='/'>
             <i className='fas fa-chart-pie' />
-            Dashboard
+            <span>Dashboard</span>
           </Link>
           <Link to='/profiles'>
             <i className='fas fa-users' />
-            Employees
+            <span>Employees</span>
           </Link>
           <Link to='/calendar'>
             <i className='far fa-calendar-alt' />
-            Schedule
+            <span>Schedule</span>
           </Link>
           <Link to='/about'>
             <i className='fas fa-info-circle' />
-            About us
+            <span>About us</span>
           </Link>
         </div>
       </div>

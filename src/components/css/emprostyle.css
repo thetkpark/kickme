@@ -106,10 +106,9 @@ nav ul li a:hover {
   margin-right: 3%;
   font-style: italic;
 }
-.contactlist a:hover{
+.contactlist a:hover {
   color: #1b8818;
   transition: all 300ms ease-in-out;
-
 }
 .cbox {
   width: 100%;
@@ -244,12 +243,12 @@ nav ul li a:hover {
   height: 100%;
 }
 
-.tabs-block{
+.tabs-block {
   overflow: hidden;
   background-color: rgb(164, 209, 164);
   box-shadow: 0 0.3vw 0.3em rgba(0, 0, 0, 0.295);
 }
-.tabs{
+.tabs {
   background-color: inherit;
   float: left;
   cursor: pointer;
@@ -267,18 +266,18 @@ nav ul li a:hover {
 }
 
 /* Create an active/current tablink class */
-.tabs:active{
+.tabs:active {
   color: rgb(59, 59, 59);
   background-color: rgb(238, 238, 238);
   border-bottom: rgb(252, 252, 252) solid 3px;
 }
 
-.active-tabs{
+.active-tabs {
   color: rgb(250, 250, 250);
   background-color: #35522a;
   border-bottom: rgb(252, 252, 252) solid 3px;
 }
-.active-tabs::before{
+.active-tabs::before {
   content: "";
   display: block;
   position: absolute;
@@ -289,12 +288,11 @@ nav ul li a:hover {
   background-color: rgb(114, 29, 81);
 }
 
-
-.tabs-content{
+.tabs-content {
   width: 100%;
   height: 85%;
 }
-.content-t{
+.content-t {
   padding-top: 1%;
   text-indent: 2%;
   text-align: left;
@@ -304,29 +302,29 @@ nav ul li a:hover {
   display: none;
   border-bottom: #1f1f1f solid 1px;
 }
-.active-content{
+.active-content {
   display: block;
 }
-.infotabs-content{
+.infotabs-content {
   margin-left: 2%;
   float: left;
   width: 25%;
   border-right: 1px solid #354732;
 }
-.calen-content{
+.calen-content {
   width: 90%;
   height: 90%;
   border: 0;
 }
-.calen-content iframe{
+.calen-content iframe {
   width: 100%;
   height: 100%;
   border: 0;
 }
-.task-content{
+.task-content {
   width: 90%;
 }
-.task-content p input{
+.task-content p input {
   width: 2em;
   height: 2em;
   margin-right: 1%;
@@ -362,7 +360,7 @@ nav ul li a:hover {
   outline: none;
   font-size: 15px;
 }
-button.collapsible{
+button.collapsible {
   text-align: center;
 }
 .collapsible.active {
@@ -447,4 +445,38 @@ footer p {
 footer span {
   color: #f0f0f0;
   font-size: 0.8em;
+}
+@media only screen and (max-width: 1024px) {
+  #sidebar span {
+    font-size: 0.7em;
+  }
+  #sidebar .panel button.collapsible {
+    text-align: center;
+    font-size: 0.5em;
+  }
+  #sidebar .panel .collapsible .contentP p {
+    font-size: 0.5em;
+  }
+  #mainEm .profileTab {
+    font-size: 0.6em;
+  }
+  .profilePic {
+    width: 50%;
+    height: 90%;
+    margin-left: 2%;
+    border: #354732 3px solid;
+    border-radius: 10%;
+    background-image: url(../asset/boxchar5.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  .profileInfo {
+    margin-left: 3%;
+    text-align: left;
+  }
+  .popup {
+    width: 60%;
+    height: 30%;
+  }
 }

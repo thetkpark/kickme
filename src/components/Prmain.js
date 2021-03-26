@@ -89,6 +89,8 @@ class Prmain extends React.Component {
                   <i className='fab fa-facebook-square'></i>
                 </a>
               </div>
+              <div className="configP"><button>Edit</button></div>
+              <div className="configP"><button>Finish</button></div>
             </div>
           </div>
 

@@ -325,3 +325,13 @@ footer span {
   color: #f0f0f0;
   font-size: 0.8em;
 }
+@media only  screen and (max-width:1024px){
+  .popup {
+    width: 60%;
+    height: 30%;
+  }
+
+  #sidebar .panel {
+    font-size: 0.6em;
+  }
+}
