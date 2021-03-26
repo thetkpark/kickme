@@ -10,11 +10,15 @@ import Employees from './pages/Employees'
 import Profiles from './pages/Profiles'
 
 import Notify from './components/js/jsfnc'
+import Login from './pages/Login'
 class App extends Component {
   render () {
     return (
       <BrowserRouter>
         <Switch>
+          <Route path='/Login'>
+            <Login />
+          </Route>
           <Route path='/profiles'>
             <Profiles />
           </Route>

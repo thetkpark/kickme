@@ -8,8 +8,6 @@ export const Notify = () => {
   document.getElementById('dismiss-btn').addEventListener('click', function () {
     document.getElementsByClassName('popup')[0].classList.remove('active')
   })
-
-  
 }
 
 //show
@@ -202,8 +200,6 @@ export function selectChar () {
   }
 }
 
-
-
 ////////////////////////////////////////////////index(magics)
 export const Htextgen = () => {
   var i = 0,
@@ -218,4 +214,20 @@ export const Htextgen = () => {
     }
   }
   typing()
+}
+
+export const lgp = () => {
+  const x = document.getElementById('login')
+  const y = document.getElementById('register')
+  const z = document.getElementById('btnLtg')
+  function registering () {
+    x.style.left = '-400px'
+    y.style.left = '50px'
+    z.style.left = '110px'
+  }
+  function loging () {
+    x.style.left = '-400px'
+    y.style.left = '50px'
+    z.style.left = '110px'
+  }
 }
